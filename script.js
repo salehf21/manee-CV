@@ -21,13 +21,29 @@ gsap.from(".card", {
   stagger: 0.2
 });
 
-// Particles Background
-particlesJS("particles-js", {
+// tsParticles with mouse interaction
+tsParticles.load("tsparticles", {
+  background: { color: { value: "transparent" } },
   particles: {
     number: { value: 60 },
-    size: { value: 3 },
-    move: { speed: 1.5 },
-    line_linked: { enable: true, color: "#b14aed" },
-    color: { value: "#6f42c1" }
+    size: { value: 2 },
+    move: { enable: true, speed: 1 },
+    opacity: { value: 0.25 },
+    color: { value: "#9f7aea" },
+    links: {
+      enable: true,
+      distance: 120,
+      color: "#b497d6",
+      opacity: 0.2
+    }
+  },
+  interactivity: {
+    events: {
+      onHover: { enable: true, mode: "repulse" },
+      resize: true
+    },
+    modes: {
+      repulse: { distance: 100, duration: 0.5 }
+    }
   }
 });

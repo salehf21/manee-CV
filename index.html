@@ -1,101 +1,127 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manee Al-Ghwairi | Oracle Fusion Consultant</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
         * {
             box-sizing: border-box;
             scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: #f0f2f5;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f8f9fb, #e9ecf3);
             color: #333;
         }
 
         header {
-            background: linear-gradient(120deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #6f42c1, #9f7aea);
             color: white;
-            text-align: center;
             padding: 6rem 2rem;
+            text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
-            header::before {
+            header::after {
                 content: "";
                 position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: url('https://www.transparenttextures.com/patterns/cubes.png');
-                opacity: 0.05;
-                z-index: 0;
+                width: 200%;
+                height: 200%;
+                top: -50%;
+                left: -50%;
+                background: radial-gradient(circle, rgba(255,255,255,0.03) 20%, transparent 80%);
+                animation: rotateBg 60s linear infinite;
             }
 
-            header h1, header p {
-                position: relative;
-                z-index: 1;
+        @keyframes rotateBg {
+            0% {
+                transform: rotate(0deg);
             }
 
-            header h1 {
-                font-size: 3.5rem;
-                margin-bottom: 0.5rem;
-                animation: fadeInDown 1s ease;
+            100% {
+                transform: rotate(360deg);
             }
+        }
 
-            header p {
-                font-size: 1.2rem;
-                animation: fadeInUp 1.2s ease;
-            }
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            z-index: 1;
+            position: relative;
+            animation: fadeInDown 1s;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            z-index: 1;
+            position: relative;
+            animation: fadeInUp 1.2s;
+        }
 
         section {
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             max-width: 1000px;
             margin: auto;
         }
 
         h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #764ba2;
+            font-size: 2.2rem;
+            color: #6f42c1;
+            margin-bottom: 2rem;
+            animation: fadeInRight 0.8s;
             position: relative;
-            animation: fadeInRight 1s ease;
         }
 
         .card {
             background: white;
-            border-radius: 16px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            border-radius: 20px;
             padding: 2rem;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            animation: fadeInUp 1s;
+            transition: transform 0.3s ease;
         }
 
-            .card h3 {
-                margin-top: 0;
-                color: #333;
+            .card:hover {
+                transform: translateY(-8px);
             }
 
-            .card ul {
-                padding-left: 1.2rem;
+            .card h3 {
+                font-size: 1.3rem;
+                color: #333;
+                margin-bottom: 0.5rem;
             }
+
+            .card p, .card ul {
+                line-height: 1.6;
+                font-size: 1rem;
+                color: #555;
+            }
+
+        ul {
+            padding-left: 1.2rem;
+        }
 
         footer {
-            background: #333;
-            color: #eee;
+            background: #6f42c1;
+            color: white;
             text-align: center;
             padding: 2rem;
+            margin-top: 4rem;
         }
 
         a {
-            color: #764ba2;
+            color: #9f7aea;
             text-decoration: none;
         }
 
@@ -111,51 +137,51 @@
     </header>
 
     <section>
-        <h2>Profile</h2>
+        <h2>About Me</h2>
         <div class="card">
             <p>
-                Oracle Fusion Financial Consultant with hands-on experience in ERP implementation and operations. Proficient in GL, AP, AR, CM, FA, and SLA. Strong analytical and problem-solving skills, committed to delivering business value through functional excellence.
+                A passionate Oracle Fusion Financial Consultant with experience in ERP system implementations and business operations. Skilled in Oracle GL, AP, AR, CM, FA, and SLA modules. Driven by precision, clarity, and problem-solving. I aim to help organizations digitally transform their financial processes.
             </p>
         </div>
 
         <h2>Experience</h2>
         <div class="card">
-            <h3>Oracle Fusion Consultant – Software Consultancy, Amman</h3>
+            <h3>Oracle Fusion Consultant – Software Consultancy (Amman)</h3>
             <p><em>Jan 2024 – Present</em></p>
             <ul>
-                <li>Lead full-cycle Oracle Fusion Financials implementation projects.</li>
-                <li>Translate business needs into functional specs and configurations.</li>
-                <li>Conduct UAT, deliver training, and manage documentation.</li>
+                <li>Managed full-cycle Oracle Financials implementations.</li>
+                <li>Developed functional specifications from business requirements.</li>
+                <li>Trained users and maintained detailed documentation.</li>
             </ul>
         </div>
         <div class="card">
-            <h3>On-site Support Consultant – SAFE, Riyadh</h3>
+            <h3>On-site Support Consultant – SAFE (Riyadh)</h3>
             <p><em>Dec 2024 – Present</em></p>
             <ul>
-                <li>Resolve ERP issues and support period closing operations.</li>
-                <li>Review GL and SLA configurations for compliance.</li>
-                <li>Coordinate SR resolutions with cross-functional teams.</li>
+                <li>Provided hands-on support during financial closing operations.</li>
+                <li>Resolved user-reported ERP issues effectively.</li>
+                <li>Ensured GL/SLA compliance and optimized financial workflows.</li>
             </ul>
         </div>
         <div class="card">
-            <h3>User Support Advisor – Webhelp, Amman</h3>
+            <h3>User Support Advisor – Webhelp (Amman)</h3>
             <p><em>Dec 2020 – Jan 2024</em></p>
             <ul>
-                <li>Moderated content and supported platform policies.</li>
-                <li>Delivered user feedback and assisted QA teams.</li>
+                <li>Reviewed digital content for compliance and quality standards.</li>
+                <li>Supported users and relayed technical feedback to QA teams.</li>
             </ul>
         </div>
 
         <h2>Education</h2>
         <div class="card">
-            <p><strong>Bachelor's in Accounting</strong> – Al-Albayt University (2016–2020)</p>
-            <p><strong>Oracle Cloud Application (Self-Study)</strong> – GL, AP, AR, CM, Tax, FA</p>
+            <p><strong>Bachelor’s Degree in Accounting</strong> – Al-Albayt University (2016–2020)</p>
+            <p><strong>Oracle Cloud Application Training (Self-Study)</strong> – GL, AP, AR, CM, Tax, FA</p>
         </div>
 
         <h2>Contact</h2>
         <div class="card">
             <p>Email: <a href="mailto:maneealghwairi98@gmail.com">maneealghwairi98@gmail.com</a></p>
-            <p>Phone: +962786730000 | WhatsApp KSA: +966504397895</p>
+            <p>Phone: +962786730000 &nbsp;&nbsp;|&nbsp;&nbsp; WhatsApp (KSA): +966504397895</p>
             <p>Location: Amman, Jordan & Riyadh, Saudi Arabia</p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/manee-al-ghwairi-172872205/" target="_blank">View Profile</a></p>
         </div>
